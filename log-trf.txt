@@ -1,0 +1,25 @@
+﻿No such bot.
+System startup postgres Mon Nov 20 16:36:00 2017
+ChatScript Version 7.61  compiled Nov 20 2017 16:22:58
+No errors or warnings
+
+
+
+Finished compile
+
+System startup createsystem Mon Nov 20 16:36:00 2017
+Server ChatScript EVSERVER Version 7.61 pid: 16530 64 bit LINUX compiled Nov 20 2017 16:22:58 host=local
+Params:   dict:2097151 fact:800000 text:100000kb hash:215127 
+          buffer:80x80kb cache:1x5000kb userfacts:100 outputlimit:80000 loglimit:80000
+Build0:  dict=68795  fact=129733  heap=1156120 Compiled:Nov04'17-16:20:42 by version 7.6 "0"
+Build1:  dict=7  fact=5  heap=126148 Compiled:Nov20'17-16:36:00 by version 7.61 "postgres"
+Used 60MB: dict 269,335 (23701kb) hashdepths 74229.68579.39230.18988.8417.3566.1364.502.168.66.15.1.2.1. words 269335 unusedbuckets 74229 fact 215,285 (10333kb) heap 14858kb
+           buffer (6400kb) cache (5000kb)
+Free 113MB: dict 1,827,815 fact 584,715 stack/heap 85,141KB 
+
+    *** Server WIDE OPEN to :command use.
+    Postgres enabled.
+Dbinit failed - dbname = demo port = 5,432 user = demouser password = demopass - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5"?
+

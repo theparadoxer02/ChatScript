@@ -44,6 +44,7 @@ Handling client:
  - if there is still some data to write, write listener is added to ev again, until all data is written
  - once data is written, client instance is deregistered from libev, socket closed and object destroyed
 */
+
 #include "common.h"
 #ifdef WIN32
 	#include "ev.h"
@@ -52,6 +53,7 @@ Handling client:
 #endif
 #include "evserver.h"
 
+#include <netinet/tcp.h>
 #include <vector>
 #include <algorithm>
 extern char serverLogfileName[200];

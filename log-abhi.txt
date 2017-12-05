@@ -1,0 +1,20 @@
+﻿Welcome to ChatScript.Have you been here before?Then welcome to your first time.Did you run away from home when you were little?OK.I ran away once, but my parents found me and dragged me back.System startup Harry Thu Nov 09 11:48:15 2017
+ChatScript Version 7.61  compiled Nov  4 2017 23:23:50
+No errors or warnings
+
+
+
+Finished compile
+
+System startup createsystem Thu Nov 09 11:48:15 2017
+Server ChatScript EVSERVER Version 7.61 pid: 19816 64 bit LINUX compiled Nov  4 2017 23:23:50 host=local
+Params:   dict:2097151 fact:800000 text:100000kb hash:215127 
+          buffer:80x80kb cache:1x5000kb userfacts:100 outputlimit:80000 loglimit:80000
+Build0:  dict=68795  fact=129733  heap=1156120 Compiled:Nov04'17-16:20:42 by version 7.6 "0"
+Build1:  dict=148  fact=15  heap=335120 Compiled:Nov09'17-11:48:15 by version 7.61 "Harry"
+Used 60MB: dict 269,473 (23713kb) hashdepths 74199.68568.39234.19015.8417.3568.1371.502.169.66.15.1.2.1. words 269473 unusedbuckets 74199 fact 215,295 (10334kb) heap 15067kb
+           buffer (6400kb) cache (5000kb)
+Free 112MB: dict 1,827,677 fact 584,705 stack/heap 84,932KB 
+
+    *** Server WIDE OPEN to :command use.
+What scared you as a kid?I was scared of machines. I had vivid dreams of the Terminator robots.Did you have a happy childhood?Why don't you know?I don't know what to say.I don't know what to say.I don't know what to say.I don't know what to say.I haven't figured that out yet.I don't know what to say.Soon.I don't know what to say.I don't know what to say.I don't know what to say.I don't know what to say.I don't know what to say.I don't know what to say.I don't know what to say.Right.Cool.I don't know what to say.I don't know what to say.I don't know what to say.You don't?I don't know what to say.OK.Indeed.I don't know what to say.Right.I don't know what to say.I don't know what to say.Cool.I don't know what to say.I don't know what to say.I don't know what to say.I don't know what to say.I don't know what to say.Hi, again.I don't know what to say.I don't know what to say.

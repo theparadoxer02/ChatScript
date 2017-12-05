@@ -1,0 +1,222 @@
+
+concept: ~insurance_names ["Reliance HealthGain" "Reliance Critical Illness" "Reliance Personal Accident"]
+
+outputmacro: ^print_factset_object(^fact)
+@1 = ^fact
+loop() 
+		{
+			_0 = next(FACT @1object)
+			_0 \n
+		}
+
+outputmacro: ^print_factset_subject(^fact)
+@1 = ^fact
+loop() 
+		{
+			_0 = next(FACT @1subject)
+			_0 \n
+		}
+table: insurance_table(^term ^link ^description)
+^createfact(^term member ~insurance_names)
+^createfact(^term ^link ^description)
+data:
+
+"Reliance General Insurance" "network_hospitals" "4000 plus"
+"Reliance General Insurance" "waiting_period" "4 years"
+"Reliance General Insurance" "incurred_claim_ratio" "95.87%"
+"Reliance General Insurance" "number_of_policies_issued" "79237"
+"Reliance General Insurance" "grievances_solved" "97.60%"
+"Reliance General Insurance" "renewability" "Lifetime"
+
+"Reliance HealthGain" "about_me" "The latest offering from Reliance General Insurance, this plan is all-encompassing with special benefits for single women and girl child. It comes with two vizoptions viz. Plan A and Plan B. The two plans are almost similar but Plan B offers more comprehensive coverage"
+"Reliance HealthGain" "entry_age" "5 to 65 years (No maximum age limit for 3 Lac sum insurance in Plan A) Maximum: 65 years Minimum: Individual/floater- 5 years or above(Children between 91 days and up to 4 years can be covered under a floater with at least one member aged 21 years or above)"
+"Reliance HealthGain" "policy_period" "1 year and 2 year plans"
+"Reliance HealthGain" "renewability" "Lifetime"
+"Reliance HealthGain" "medical_screening" "For Plan A needs to be performed for people above the age of 45 years for Plan B needs to be performed for people above the age of 18 years"
+"Reliance HealthGain" "basis" "Individual or Floater maximum 6 members, 2 members above the age of 21 and 4 children"
+"Reliance HealthGain" "sum_assured" "Rs 3 lakhs, 6 lakhs or 9 lakhs (Plan A) - Rs. 12 lakhs, 15 lakhs or 18 lakhs (Plan B)"
+"Reliance HealthGain" "cumulative_bonus" "Avail 33.33% increase in Base Sum Insured for every claim-free year. Maximum up to 100%, 33.33% decrease in Base Sum Insured for every claim year maximum up to the Bonus earned"
+"Reliance HealthGain" "reinstatement" "One time Reinstatement of up to 100% of sum insurance subject to the limit of 20% for the same illness"
+"Reliance HealthGain" "discounts" "Family Discount( Enjoy 5% discount for 2-3 members and 10% for 4-6 members on individual plans - Cross-sell Discount: 5% for existing customers of Reliance Private Car policy and Reliance Householder policy – Either of the following discounts : Female Proposer Discount - 5% for single women, Girl Child discount- %5 discount in floater plan for covering daughters till the age of 20 years"
+"Reliance HealthGain" "co_payment" "20% per claim; subject to minimum entry age 61 years"
+"Reliance HealthGain" "coverage" "Inpatient hospitalisation: Single private room - Day care treatment - Pre/Post-hospitalisation (up to 60 days) - Donor hospitalisation: Lower amount between 50% base sum assured and up to Rs.5 lakhs - Domiciliary hospitalisation: : Lower amount between 10% of sum assured and up to Rs. 50,000 - Domestic Road Ambulance charges: Rs.1,500 (Plan A) Rs.3,000 (Plan B) - Pre-existing diseases; subject to a 3 year waiting period (2 year waiting period applicable to Named Illnesses)"
+"Reliance HealthGain" "add_on_covers" "Accidental Death Cover: 1 Lakh Personal Accident cover for the insured(Applicable only for Plan B)"
+"Reliance HealthGain" "benefits" "Call option: Avail Call option after every claim-free year. It can be availed maximum 4 times of base sum insured provided the enhanced sum insurance disc<=50 lacs and can be exercised till the age of 60 years. After every 4 claim-free years avail up to 4 times of base sum insured.(Considering the total sum insured is less than or equal to Rs. 50 lakhs) can be exercised up to the age of 60 years Up to 4 times the chosen sum assured, subject to conditions. Policy service guarantee: In the event of delay in issuance of policy beyond 10 working days from the date of receipt of all the documents viz. Medical Reports, Premium etc you receive additional sum insurance of 10k in Plan A, and 20K in Plan B for the first policy period only. Cashless Service Guarantee: Cashless Claims-1% of claim amount for every delay of 6 business hour beyond 6 hours of receipt of all information/documents. Re-imbursement Claims: 1% of claim amount for every delay of 21 days beyond 21 days of receipt of information/documents(Maximum-6% for a claim amount) One time renewal premium waiver if the policy holder/insured suffers from any named critical illness"
+
+"Reliance Critical Illness" "about_me" "It is a specialized benefit policy that provides financial protection against life threatening and lifestyle-disabling diseases"
+"Reliance Critical Illness" "entry_age" "18 yrs. to 65 yrs- 5 Lacs. 18 yrs to 60 yrs – 7 Lacs 18 yrs to 55 yrs- 10 Lacs"
+"Reliance Critical Illness" "policy_period" "1 year or 3 years"
+"Reliance Critical Illness" "renewability" "Lifelong"
+"Reliance Critical Illness" "medical_screening" "Required for persons aged 45 years plus"
+"Reliance Critical Illness" "basis" "Individual"
+"Reliance Critical Illness" "sum_assured" "Rs.5 lakhs, Rs. 7 lakhs or Rs.10 lakh,lumpsum payout"
+"Reliance Critical Illness" "coverage" "Subject to survival above 30 days and 60 days after diagnosis of the illness for Category 1 and Category 2 respectively. - Life Threatening Illnesses: Multiple Sclerosis, Cancer, Major organ transplant, Aorta Graft Surgery, Third Degree Burns - Lifestyle Disabling: Coma, Total Blindness, Quadriplegia Heart Valve Replacement, Last Stage Renal Disease"
+"Reliance Critical Illness" "renewal_rewards" "5% No Claim discount upon every Claim-free renewal for 1 year policy term & 10% No Claim discount on cumulative basis upon every claim free 3 year policy term subject to a maximum of 50%"
+
+"Reliance Personal Accident" "about_me" "While health plans cover expenses pertaining to illnesses and injuries, this benefit policy helps protect against financial losses due to death or disability resulting from accidents"
+"Reliance Personal Accident" "entry_age" "5 yrs. to 70 yrs.; insured persons can be considered children between the ages 5 yrs. and 25 yrs"
+"Reliance Personal Accident" "basis" "Single + Family Package"
+"Reliance Personal Accident" "sum_assured" "Single Insured: As a percentage of the chosen sum assured Death, Total Permanent Disability, Loss of both limbs or both eyes, Loss of one limb and one eye - 100%, Loss of one limb or eye - 50%; Partial Permanent Disability - 1% to 75%, subject to provisions. Family Package: Spouse: If employed - chosen sum assured, if not employed - lower of Rs.1 lakh and 50% sum assured Each dependent child (5 yrs. to 25 yrs).: Lower of 25% of sum assured and Rs.50,000 Enhancement of basic sum assured for every claim-free year: 5% to 50%"
+"Reliance Personal Accident" "coverage" "Single Insured: As a percentage of the chosen sum assured Death, Total Permanent Disability, Loss of both limbs or both eyes, Loss of one limb and one eye - 100%, Loss of one limb or eye - 50%; Partial Permanent Disability - 1% to 75%, subject to provisions. Family Package: Spouse: If employed - chosen sum assured, if not employed - lower of Rs.1 lakh and 50% sum assured Each dependent child (5 yrs. to 25 yrs).: Lower of 25% of sum assured and Rs.50,000 Enhancement of basic sum assured for every claim-free year: 5% to 50%"
+"Reliance Personal Accident" "premiums" "0.45 to 1.75 per thousand of sum assured depending on risk assessment; rates increase beyond 75 yrs"
+"Reliance Personal Accident" "add_on_covers" "0.45 to 1.75 per thousand of sum assured depending on risk assessment; rates increase beyond 75 yrs"
+"Reliance Personal Accident" "benefits" "Education fund: 2 children Reimbursement of costs to bring the body home: Up to Rs.2,500"
+
+
+concept: ~greeting ['ok' 'hi' 'hello']
+
+topic: ~intro keep repeat[]
+
+# t: Hi. Welcome to Reliance Insurance Bot
+	
+
+t: SELECT_INSURANCE() ^query(direct_v ? about_me ?) Hi. Welcome to Reliance Insurance Bot. We deal with following insurance. Please select one 
+	\n ^print_factset_subject(@0) 
+	a: (_~insurance_names) $insurance_name = '_0 ^query(direct_sv $insurance_name about_me ?) $insurance_name : @0object
+	a: (*) ^reuse(SELECT_INSURANCE)
+
+u: ([type list] of [plans insurance] {available})
+	 ^query(direct_v ? about_me ?) 
+	 We deal with following insurance. Please select one  \n 
+	 ^print_factset_subject(@0) 
+
+u: (info on _~insurance_names) $insurance_name = '_0 ^query(direct_sv $$text about_me ?) $insurance_name : @0object
+
+u: ({what} {is} current plan) Current plan selected is $insurance_name
+u: (what * entry age) 
+	if(^query(direct_sv $insurance_name entry_age ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * policy period) 
+	if(^query(direct_sv $insurance_name policy_period ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * renewability) 
+	if(^query(direct_sv $insurance_name renewability ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * medical screening) 
+	if(^query(direct_sv $insurance_name medical_screening ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * basis) 
+	if(^query(direct_sv $insurance_name basis ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * sum assured) 
+	if(^query(direct_sv $insurance_name sum_assured ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: ({what} * cumulative bonus) 
+	if(^query(direct_sv $insurance_name cumulative_bonus ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * reinstatement) 
+	if(^query(direct_sv $insurance_name reinstatement ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * discounts) 
+	if(^query(direct_sv $insurance_name discounts ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * co payment) 
+	if(^query(direct_sv $insurance_name co_payment ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * coverage) 
+	if(^query(direct_sv $insurance_name coverage ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * add on cover) 
+	if(^query(direct_sv $insurance_name add_on_covers ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * benefit) 
+	if(^query(direct_sv $insurance_name benefits ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * renewal rewards) 
+	if(^query(direct_sv $insurance_name renewal_rewards ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (what * premium) 
+	if(^query(direct_sv $insurance_name premiums ?))
+		{@0object}
+	else {This option is not covered under this policy}
+
+u: (* network hospital {cover}) 4000+ network hospitals are covered 
+
+u: (* waiting period {for} pre-existing disease) waiting period is 4 years
+
+u: (* incurred claim ratio) Incurred claim ratio is 95.87%
+
+u: (* number {of} policy issue) 7937 policies have been issued 
+
+u: (* grievance solve) 97.60% grievances have been grievances
+
+u: (* renewability ) lifetime renewability
+
+u: ({why} {do} {i} need health insurance) Health insurance policies are your safeguard against unexpected
+	health complications that may prove financially burdensome to you or your family members.
+	Such policies provide sufficient cover for an individual or groups of individuals throughout the
+	insured period. Also, some tax benefits are applicable for health insurance policyholders according
+	to Section 80D of the Indian Income Tax Act.
+
+u: ( * nominee midway * {policy}) Changing the nominee is a simple task and can be done anytime during
+	during the policy tenure with the insurer. All you have to do is provide the new details to Reliance General
+
+u: ( * amount mid-way * {policy}) This is not possible. However, customers may opt for a different premium
+	at the time of policy renewal, if the company approves it.
+
+u: (* cancel {policy}) Policy cancellation is a simple process that involves writing a letter
+	subjected the same, and addressed to Reliance General Insurance. On receipt of the letter,
+	the premium amount shall be refunded, subject to the unexpired policy being less than 6 months old,
+	and no claim having been lodged during that time.
+
+u: (* one day treatment cover * policy) Hospitalization treatments are considered for periods more than 1 day. But some
+	specific day care treatments are provided which eliminate the need for extended stays in a hospital, and are covered by
+	Reliance, such as: Chemotherapy, Dialysis, Lithotripsy, Radiotherapy, Curettage and Dilation, Tonsillectomy, Cardiac Catheterization,
+	Other new surgeries/procedures.
+
+u: (* didn't use the health insurance plan * {tenure}) If you dont make any claims on your policy for a year, you earn
+	a cumulative bonus of 33.33% on your base sum insured, at no extra cost. However, the cumulative bonus can only be accumulated equal
+	to the amount of base sum insured.
+
+u: (* deadline * submit claim form  * reimbursements) It is adivsable to file claims as soon as possible once 
+	reimbursements are in order. The claim forms can be submitted at Reliance General Offices, may be routed through Rcare Team.
+
+u: ( * list of documents * submit * claims process) The following documents have to be submitted with the claim form:
+	First doctor's prescription denoting the start of symptoms, Hospital bill and receipts, All related treatment papers and prescriptions,
+	Diagnostic reports such as ECG, X-ray etc. All hospital, medical , diagnostic center, and medical shop bills in original. Discharge card from hospital. 
+	FIR report copy, if any.
+
+u: (what is health insurance) Health Insurance is an insurance policy that ensures that 
+	you get cashless treatment or expense reimbursement, in case you fall ill. A health
+	insurance policy reimburses the insured for medical and surgical expenses arising from 
+	an illness or injury that leads to hospitalization. The insurance company provides that
+	insured with the facility of cashless hospitalization at a network hospital or provides
+	a reimbursement for the incurred expenses. Furthermore, health insurance cost is provided
+	to the insured in the form of tax exemption under section 80D
+
+u: (<< tax benefits >>) Health insurance policies allow you to save thousands
+	on taxes under section 80D of Income Tax Act, 1961. The premiums paid towards the policy
+	reduce you annual tax liablility, thereby reducing your taxable earnings per year.
+
+u: (what are the key [advantage benefit] of health insurance {policy}) 
+	cashless treatment, pre and post hospitalisation, ambulance fee, no claim bonus, medical check up, room rent in your health insurance sub-limits
+
+u: (_*) *#save (^original('_0)) Apologies I am not aware of this.

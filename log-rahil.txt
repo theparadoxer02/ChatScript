@@ -1,0 +1,2 @@
+﻿Welcome to ChatScript.Have you been here before? serverLog set to 0
+ echoServer set to 1

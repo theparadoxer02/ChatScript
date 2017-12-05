@@ -1,0 +1,47 @@
+concept: ~claim_type_names ["medical" "dental" "medicare" "paramedical"]
+
+
+topic: ~intro keep repeat[]
+
+t: Hi , Welcome to insurance claim submission. Lets verify your credentials first. 
+	a: ^reuse(USER_ID_1)
+
+t: USER_ID_1 () Please enter your user id
+	a: (_*) $user_id = ^original('_0) ^reuse(USER_ID_2)
+u: USER_ID_2 (_*) $user_id = ^original('_0) User Id entered is $user_id. Is it correct ?
+	a: (~yes) Great. Please enter your password.
+		b: (_*) $user_password = ^original('_0) *#verify ($user_id, $user_password) Please wait while we verify
+			c: (~yes) ^reuse(CLAIM_TYPE)
+			c: (~no)  Your credentials cannot be verified. ^reuse(USER_ID_1)
+	a: (~no) Please enter user id again ^respond(USER_ID_2)
+
+
+
+t: CLAIM_TYPE () *#button(medical, dental, medicare, paramedical) Please select claim type from medical, dental, medicare, paramedical
+ a: (_*) $claim_type = ^original('_0)  ^reuse(CLAIM_DATE)
+ 	# if( $claim_type?~claim_type_names ) 
+ 	# 	{Claim selected by you is $claim_type. ^reuse(CLAIM_DATE)}
+ 	# else
+ 	#	{The claim type doesnt exist. ^reuse(CLAIM_TYPE)}
+ 	
+
+t: CLAIM_DATE() *#calender() Please select claim date
+	a: (_*) $claim_date = ^original('_0) Claim date selected by you is $claim_date. Type yes to proceed or no to change the date.
+		b: (~yes) ^reuse(BILL_UPLOAD)
+		b: (~no) ^reuse(CLAIM_DATE)
+
+t: BILL_UPLOAD() *#uploadImage() Please upload the bill 
+	a: (~yes) Thanks for uploading the bill. ^reuse(SUBMIT_CLAIM)
+	a: (~no) ^reuse(BILL_UPLOAD)
+
+t: SUBMIT_CLAIM() Do you want me to submit the claim ? 
+	a: (~yes) Your claim submitted successfully. Detailed summary has been send to your email id.
+		b: CLAIM_2() Do you want to file another claim ?
+			c: (~yes) ^reuse(CLAIM_TYPE)
+			c: (~no) ^reuse(CLAIM_2)  
+	a: (~no) would you like to file a new claim
+		b: (~yes) ^reuse(CLAIM_TYPE)
+
+
+
+ 
